@@ -1,61 +1,82 @@
 # Sementes da Fé 🌟
 
 ## 📖 Descrição  
-**Sementes da Fé** é um aplicativo católico interativo que ajuda jovens a conhecerem a Bíblia e os ensinamentos de Jesus por meio de histórias ilustradas, quizzes e práticas como a Lectio Divina, promovendo crescimento espiritual sem necessidade de login obrigatório :contentReference[oaicite:0]{index=0}.
+**Sementes da Fé** é um aplicativo católico interativo voltado para jovens que desejam conhecer e viver a fé de forma leve, acessível e profunda. Através de histórias bíblicas ilustradas, quizzes, práticas de oração como a Lectio Divina e desafios inspirados nos ensinamentos de Jesus, o app transforma o aprendizado espiritual em uma jornada lúdica e significativa. Ideal para uso pessoal, encontros de catequese, grupos de jovens e famílias, o aplicativo promove o crescimento na fé e o engajamento com a Palavra de Deus, tudo isso sem a necessidade de login obrigatório, respeitando o ritmo e a liberdade de cada usuário.
 
 ## 🎯 Objetivo  
-Transformar o aprendizado bíblico em uma jornada lúdica, acessível e significativa para jovens de 12 a 18 anos, apoiando encontros de catequese, grupos de jovens e uso pessoal :contentReference[oaicite:1]{index=1}.
+Transformar o aprendizado bíblico em uma jornada lúdica, acessível e significativa para jovens de 12 a 18 anos, apoiando encontros de catequese, grupos de jovens e uso pessoal.
 
 ## ✨ Funcionalidades Principais  
 - 📖 **Histórias Bíblicas Animadas**  
-  Quadrinhos interativos com hotspots para contextualizar trechos bíblicos :contentReference[oaicite:2]{index=2}.  
+  Quadrinhos interativos com hotspots para contextualizar trechos bíblicos[^2].  
 - ❓ **Quizzes e Reflexões**  
-  Perguntas ao fim de cada episódio para reforçar a compreensão e registrar progresso :contentReference[oaicite:3]{index=3}.  
+  Perguntas ao fim de cada episódio para reforçar a compreensão e registrar progresso[^3].  
 - 🙏 **Lectio Divina Guiada**  
-  Passo a passo interativo para leitura orante (lectio, meditatio, oratio, contemplatio) :contentReference[oaicite:4]{index=4}.  
+  Passo a passo interativo para leitura orante (lectio, meditatio, oratio, contemplatio)[^4].  
 - 💬 **Comunidade Moderada**  
-  Fóruns e grupos de discussão com mediação de catequistas (login opcional) :contentReference[oaicite:5]{index=5}.  
+  Fóruns e grupos de discussão com mediação de catequistas (login opcional)[^5].  
 - 🏆 **Gamificação**  
-  Sistema de pontos, conquistas e recompensas visuais para motivar o engajamento contínuo :contentReference[oaicite:6]{index=6}.
+  Sistema de pontos, conquistas e recompensas visuais para motivar o engajamento contínuo[^6].
 
 ## 🧱 Tecnologias  
 
 ### Frontend  
-- **React Native**: desenvolvimento nativo para Android e iOS com JavaScript/TypeScript :contentReference[oaicite:7]{index=7}  
-- **React Native Web**: converte o mesmo código para PWA no navegador :contentReference[oaicite:8]{index=8}  
-- **AsyncStorage**: armazenamento local persistente de progresso e configurações :contentReference[oaicite:9]{index=9}  
+- **React Native**: desenvolvimento nativo para Android e iOS com JavaScript/TypeScript[^7]  
+- **React Native Web**: converte o mesmo código para PWA no navegador[^8]  
+- **AsyncStorage**: armazenamento local persistente de progresso e configurações[^9]  
 
 ### Backend  
-- **Node.js**: ambiente de execução JavaScript, leve e escalável :contentReference[oaicite:10]{index=10}  
-- **Express.js**: framework minimalista para APIs RESTful :contentReference[oaicite:11]{index=11}  
+- **Node.js**: ambiente de execução JavaScript, leve e escalável[^10]  
+- **Express.js**: framework minimalista para APIs RESTful[^11]  
 
 ### Banco de Dados  
-- **PostgreSQL**: banco relacional avançado e open-source :contentReference[oaicite:12]{index=12}  
-- **Prisma ORM**: mapeamento objeto-relacional com migrações automáticas e tipagem forte :contentReference[oaicite:13]{index=13}  
-- **Supabase**: hospedagem gratuita de PostgreSQL com autenticação e storage :contentReference[oaicite:14]{index=14}  
-- **Azure Database for PostgreSQL**: opção futura de serviço gerenciado na nuvem :contentReference[oaicite:15]{index=15}  
+- **PostgreSQL**: banco relacional avançado e open-source[^12]  
+- **Prisma ORM**: mapeamento objeto-relacional com migrações automáticas e tipagem forte[^13]  
+- **Supabase**: hospedagem gratuita de PostgreSQL com autenticação e storage[^14]  
+- **Azure Database for PostgreSQL**: opção futura de serviço gerenciado na nuvem[^15]  
 
 ## 🏗️ Arquitetura & Padrões  
-- **Guest-First / Progressive Engagement**: adia o login até a necessidade real para reduzir atrito :contentReference[oaicite:16]{index=16}.  
-- **Onboarding Suave**: telas explicativas com “Pular” e “Próximo”, minimizando fricção inicial :contentReference[oaicite:17]{index=17}.  
-- **Navegação Consistente**: barra fixa ou gestos, botões desabilitados quando inativos e feedback tátil/visual :contentReference[oaicite:18]{index=18}.  
+- **Guest-First / Progressive Engagement**: adia o login até a necessidade real para reduzir atrito[^16].  
+- **Onboarding Suave**: telas explicativas com “Pular” e “Próximo”, minimizando fricção inicial[^17].  
+- **Navegação Consistente**: barra fixa ou gestos, botões desabilitados quando inativos e feedback tátil/visual[^18].  
 
 ## 🖼️ Telas & Fluxo de Navegação  
 
 1. **Splash / Welcome**  
-   - Logo e botão “Começar”; identifica primeira vez para exibir onboarding :contentReference[oaicite:19]{index=19}.  
+   - Logo e botão “Começar”; identifica primeira vez para exibir onboarding[^19].  
 2. **Onboarding (3 cartões)**  
-   - Ilustração, texto e botões “Próximo” / “Pular” para introduzir recursos do app :contentReference[oaicite:20]{index=20}.  
+   - Ilustração, texto e botões “Próximo” / “Pular” para introduzir recursos do app[^20].  
 3. **Home**  
    - Cards de módulos: Histórias, Ensinamentos, Lectio Divina, Comunidade.  
 4. **Detalhe de Episódio**  
    - Quadrinhos interativos com hotspots e botões “Voltar” / “Próxima”.  
 5. **Quiz**  
-   - Perguntas de múltipla escolha, validação de resposta e feedback imediato :contentReference[oaicite:21]{index=21}.  
+   - Perguntas de múltipla escolha, validação de resposta e feedback imediato[^21].  
 6. **Resultado**  
    - Placar, conquistas desbloqueadas e botão de compartilhamento nativo.  
 7. **Configurações**  
    - Reset de progresso, criar conta para sincronização e ajustes de perfil.
+
+[^2]: Bible App for Kids – Disponível em <https://www.bible.com/kids>; acesso em 19 abr. 2025.  
+[^3]: Life.Church. *Bible App for Kids Curriculum*. Disponível em <https://open.life.church/preschool>; acesso em 19 abr. 2025.  
+[^4]: Saint Mary's Press. *The Catholic Children's Bible App*. Disponível em <https://www.smp.org/TheCatholicChildren%27sBibleapp/>; acesso em 19 abr. 2025.  
+[^5]: Remember Me. *Bible Memory App*. Disponível em <https://www.remem.me/>; acesso em 19 abr. 2025.  
+[^6]: YOUCAT Foundation. *YOUCAT Daily*. Disponível em <https://youcat.org/daily/>; acesso em 19 abr. 2025.  
+[^7]: Meta Platforms. *React Native*. Disponível em <https://reactnative.dev/>; acesso em 19 abr. 2025.  
+[^8]: Nicolas Gallagher. *React Native Web*. Disponível em <https://necolas.github.io/react-native-web/>; acesso em 19 abr. 2025.  
+[^9]: React Native Community. *AsyncStorage*. Disponível em <https://github.com/react-native-async-storage/async-storage>; acesso em 19 abr. 2025.  
+[^10]: OpenJS Foundation. *Node.js*. Disponível em <https://nodejs.org/>; acesso em 19 abr. 2025.  
+[^11]: Express.js. *Express*. Disponível em <https://expressjs.com/>; acesso em 19 abr. 2025.  
+[^12]: The PostgreSQL Global Development Group. *PostgreSQL*. Disponível em <https://www.postgresql.org/>; acesso em 19 abr. 2025.  
+[^13]: Prisma. *Prisma ORM*. Disponível em <https://www.prisma.io/>; acesso em 19 abr. 2025.  
+[^14]: Supabase. *Supabase*. Disponível em <https://supabase.com/>; acesso em 19 abr. 2025.  
+[^15]: Microsoft Azure. *Azure Database for PostgreSQL*. Disponível em <https://azure.microsoft.com/en-us/products/postgresql>; acesso em 19 abr. 2025.  
+[^16]: Nielsen Norman Group. *Progressive Engagement*. Disponível em <https://www.nngroup.com/articles/progressive-engagement/>; acesso em 19 abr. 2025.  
+[^17]: Nielsen Norman Group. *Mobile Onboarding patterns*. Disponível em <https://www.nngroup.com/articles/mobile-onboarding/>; acesso em 19 abr. 2025.  
+[^18]: Nielsen Norman Group. *Mobile Navigation patterns*. Disponível em <https://www.nngroup.com/articles/mobile-navigation/>; acesso em 19 abr. 2025.  
+[^19]: Material Design. *Splash Screen guidelines*. Disponível em <https://material.io/design/platform-guidance/android-splash-screen.html>; acesso em 19 abr. 2025.  
+[^20]: Material Design. *Onboarding patterns*. Disponível em <https://material.io/design/communication/onboarding.html>; acesso em 19 abr. 2025.  
+[^21]: UX Planet. *Quiz Feedback patterns*. Disponível em <https://uxplanet.org/designing-quiz-feedback-ux-7f4c19c8c1cf>; acesso em 19 abr. 2025. 
 
 ## 🚀 Instalação & Execução  
 ```bash
