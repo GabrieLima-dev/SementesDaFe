@@ -89,5 +89,9 @@ git commit -m "Adiciona <descrição da feature>"
 ## 🛡️ Licença
 Este projeto está licenciado sob a MIT License.
 
-##  📝 Autor
-<img src="path/to/your-profile.jpg" alt="Foto do Autor" width="100" style="border-radius:50%;" /> **Seu Nome** – Idealizador e desenvolvedor principal :contentReference[oaicite:22]{index=22} ``` ::contentReference[oaicite:23]{index=23}
+## 📝 Autores
+
+| ![GL](https://images.weserv.nl/?url=github.com/GabrieLima-dev.png&h=100&w=100&fit=cover&mask=circle) | ![OU](https://images.weserv.nl/?url=github.com/OutroUsuario.png&h=100&w=100&fit=cover&mask=circle) |
+| :---: | :---: |
+| **Gabriel Lima**<br/>Idealizador e desenvolvedor principal | **Outro Membro**<br/>Designer |
+
