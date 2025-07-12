@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sementes da Fé 🌟</title>
+    <link rel="stylesheet" href="sementes_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <div class="logo-container">
+                <i class="fas fa-seedling logo-icon"></i>
+                <h1 class="app-title">Sementes da Fé</h1>
+                <p class="app-subtitle">Cresça na fé de forma lúdica</p>
+            </div>
+            <button class="primary-btn" onclick="startOnboarding()">
+                <i class="fas fa-play"></i> Começar Jornada
+            </button>
+        </div>
+    </div>
+
+    <!-- Onboarding -->
+    <div id="onboarding-screen" class="screen">
+        <div class="onboarding-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="onboarding-progress"></div>
+            </div>
+            
+            <div class="onboarding-slide active" data-slide="0">
+                <div class="slide-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h2>Histórias Bíblicas Animadas</h2>
+                <p>Descubra as Sagradas Escrituras através de histórias interativas e envolventes</p>
+            </div>
+            
+            <div class="onboarding-slide" data-slide="1">
+                <div class="slide-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2>Quizzes e Reflexões</h2>
+                <p>Teste seus conhecimentos e reflita sobre os ensinamentos de Jesus</p>
+            </div>
+            
+            <div class="onboarding-slide" data-slide="2">
+                <div class="slide-icon">
+                    <i class="fas fa-praying-hands"></i>
+                </div>
+                <h2>Lectio Divina Guiada</h2>
+                <p>Aprenda a orar com as Escrituras de forma profunda e contemplativa</p>
+            </div>
+            
+            <div class="onboarding-navigation">
+                <button class="secondary-btn" onclick="skipOnboarding()">Pular</button>
+                <button class="primary-btn" onclick="nextOnboardingSlide()">Próximo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>Olá, Jovem! 👋</h1>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <span id="user-points">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-fire"></i>
+                        <span id="user-streak">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="modules-grid">
+                <div class="module-card" onclick="openStories()">
+                    <div class="module-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Histórias Bíblicas</h3>
+                    <p>Aventuras da fé em quadrinhos</p>
+                    <div class="module-progress">
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                        <span>3/10 episódios</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openQuizzes()">
+                    <div class="module-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Quizzes</h3>
+                    <p>Teste seus conhecimentos</p>
+                    <div class="module-progress">
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span>12/20 concluídos</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openLectioDivina()">
+                    <div class="module-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h3>Lectio Divina</h3>
+                    <p>Oração contemplativa</p>
+                    <div class="module-progress">
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 10%"></div>
+                        </div>
+                        <span>1/15 práticas</span>
+                    </div>
+                </div>
+
+                <div class="module-card" onclick="openCommunity()">
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Comunidade</h3>
+                    <p>Conecte-se com outros jovens</p>
+                    <div class="module-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Em breve</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="daily-challenge">
+                <h3>Desafio Diário</h3>
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="challenge-content">
+                        <h4>Atos de Bondade</h4>
+                        <p>Pratique um ato de bondade hoje e compartilhe sua experiência</p>
+                    </div>
+                    <button class="challenge-btn">Aceitar</button>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" onclick="showHome()">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </button>
+            <button class="nav-item" onclick="showProgress()">
+                <i class="fas fa-chart-line"></i>
+                <span>Progresso</span>
+            </button>
+            <button class="nav-item" onclick="showProfile()">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </button>
+            <button class="nav-item" onclick="showSettings()">
+                <i class="fas fa-cog"></i>
+                <span>Mais</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Stories Screen -->
+    <div id="stories-screen" class="screen">
+        <header class="screen-header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2>Histórias Bíblicas</h2>
+            <button class="filter-btn">
+                <i class="fas fa-filter"></i>
+            </button>
+        </header>
+
+        <div class="stories-list">
+            <div class="story-card completed" onclick="openStory(1)">
+                <div class="story-image">
+                    <i class="fas fa-check-circle completed-icon"></i>
+                    <div class="story-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div>
+                </div>
+                <div class="story-content">
+                    <h3>A Criação</h3>
+                    <p>Descubra como Deus criou o mundo em 7 dias</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                        <span><i class="fas fa-star"></i> 50 pts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card completed" onclick="openStory(2)">
+                <div class="story-image">
+                    <i class="fas fa-check-circle completed-icon"></i>
+                    <div class="story-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"></div>
+                </div>
+                <div class="story-content">
+                    <h3>Noé e a Arca</h3>
+                    <p>A história da fé e obediência de Noé</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                        <span><i class="fas fa-star"></i> 75 pts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card current" onclick="openStory(3)">
+                <div class="story-image">
+                    <i class="fas fa-play-circle current-icon"></i>
+                    <div class="story-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"></div>
+                </div>
+                <div class="story-content">
+                    <h3>Moisés e o Êxodo</h3>
+                    <p>A libertação do povo de Israel do Egito</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-clock"></i> 12 min</span>
+                        <span><i class="fas fa-star"></i> 100 pts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card locked">
+                <div class="story-image">
+                    <i class="fas fa-lock locked-icon"></i>
+                    <div class="story-bg" style="background: #e0e0e0"></div>
+                </div>
+                <div class="story-content">
+                    <h3>Davi e Golias</h3>
+                    <p>A vitória da fé sobre o gigante</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-clock"></i> 10 min</span>
+                        <span><i class="fas fa-star"></i> 120 pts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Detail Screen -->
+    <div id="story-detail-screen" class="screen">
+        <header class="screen-header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2 id="story-title">Moisés e o Êxodo</h2>
+            <button class="share-btn">
+                <i class="fas fa-share"></i>
+            </button>
+        </header>
+
+        <div class="story-reader">
+            <div class="story-panel active" id="panel-1">
+                <div class="panel-image">
+                    <div class="comic-panel" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)">
+                        <div class="character">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="speech-bubble">
+                            "Deixe meu povo ir!"
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-text">
+                    <p>Moisés foi enviado por Deus para libertar o povo de Israel da escravidão no Egito. Com coragem e fé, ele confrontou o poderoso Faraó.</p>
+                    <div class="hotspot-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Toque nos personagens para saber mais!</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-navigation">
+                <button class="nav-btn" onclick="previousPanel()" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="panel-indicator">
+                    <span class="current-panel">1</span> / <span class="total-panels">5</span>
+                </div>
+                <button class="nav-btn" onclick="nextPanel()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="story-actions">
+            <button class="action-btn" onclick="startQuiz()">
+                <i class="fas fa-question-circle"></i>
+                Quiz Final
+            </button>
+            <button class="action-btn secondary" onclick="addToFavorites()">
+                <i class="fas fa-heart"></i>
+                Favoritar
+            </button>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <header class="screen-header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2>Quiz: Moisés e o Êxodo</h2>
+            <div class="quiz-timer">
+                <i class="fas fa-clock"></i>
+                <span id="timer">2:00</span>
+            </div>
+        </header>
+
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="quiz-progress" style="width: 20%"></div>
+                </div>
+                <span class="question-counter">Pergunta <span id="current-question">1</span> de <span id="total-questions">5</span></span>
+            </div>
+
+            <div class="question-card">
+                <h3 id="question-text">Quem enviou Moisés para libertar o povo de Israel?</h3>
+                
+                <div class="options-list">
+                    <div class="option" onclick="selectOption(this, 'A')">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">O Faraó</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'B')">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Deus</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'C')">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Arão</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 'D')">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">O povo de Israel</span>
+                    </div>
+                </div>
+
+                <button class="confirm-btn" onclick="confirmAnswer()" disabled>
+                    <i class="fas fa-check"></i>
+                    Confirmar Resposta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Result Screen -->
+    <div id="quiz-result-screen" class="screen">
+        <div class="result-container">
+            <div class="result-header">
+                <div class="result-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Parabéns!</h2>
+                <p>Você completou o quiz com sucesso!</p>
+            </div>
+
+            <div class="result-stats">
+                <div class="stat-card">
+                    <div class="stat-number">4/5</div>
+                    <div class="stat-label">Acertos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Pontuação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+100</div>
+                    <div class="stat-label">Pontos</div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Conquistas Desbloqueadas</h3>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Estudioso das Escrituras</h4>
+                        <p>Complete 5 quizzes com 80% ou mais</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="primary-btn" onclick="shareResult()">
+                    <i class="fas fa-share"></i>
+                    Compartilhar
+                </button>
+                <button class="secondary-btn" onclick="backToHome()">
+                    <i class="fas fa-home"></i>
+                    Voltar ao Início
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification-toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toast-message">Conquista desbloqueada!</span>
+        </div>
+    </div>
+
+    <script src="sementes_script.js"></script>
+</body>
+</html>
