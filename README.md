@@ -8,7 +8,9 @@ Transformar o aprendizado bíblico em uma jornada lúdica, acessível e signific
 
 ## ✨ Funcionalidades Principais  
 - 📖 **Histórias Bíblicas Animadas**  
-  Quadrinhos interativos com hotspots para contextualizar trechos bíblicos[^2].  
+  Quadrinhos interativos com hotspots para contextualizar trechos bíblicos[^2].
+- 👑 Galeria de Personagens
+Coleção de cartinhas dos heróis bíblicos com biografias, atributos e curiosidades[^1].  
 - ❓ **Quizzes e Reflexões**  
   Perguntas ao fim de cada episódio para reforçar a compreensão e registrar progresso[^3].  
 - 🙏 **Lectio Divina Guiada**  
@@ -47,16 +49,21 @@ Transformar o aprendizado bíblico em uma jornada lúdica, acessível e signific
 2. **Onboarding (3 cartões)**  
    - Ilustração, texto e botões “Próximo” / “Pular” para introduzir recursos do app[^20].  
 3. **Home**  
-   - Cards de módulos: Histórias, Ensinamentos, Lectio Divina, Comunidade.  
+   - Cards de módulos: Histórias, Personagens, Ensinamentos, Lectio Divina, Comunidade.  
 4. **Detalhe de Episódio**  
    - Quadrinhos interativos com hotspots e botões “Voltar” / “Próxima”.  
 5. **Quiz**  
-   - Perguntas de múltipla escolha, validação de resposta e feedback imediato[^21].  
-6. **Resultado**  
+   - Perguntas de múltipla escolha, validação de resposta e feedback imediato[^21].
+6. **Galeria de Personagens**
+   - Grid de cartinhas colecionáveis com filtros por testamento e categoria[^22].
+7. **Perfil do Personagem**
+   - Biografia detalhada, versículos-chave, cronologia e easter eggs interativos[^23].
+8. **Resultado**  
    - Placar, conquistas desbloqueadas e botão de compartilhamento nativo.  
-7. **Configurações**  
+9. **Configurações**  
    - Reset de progresso, criar conta para sincronização e ajustes de perfil.
 
+[^1]: Trading Card Games Educational Research. Digital Collectibles in Learning. Disponível em <https://www.gamification.org/digital-trading-cards-education>; acesso em 19 abr. 2025.
 [^2]: Bible App for Kids – Disponível em <https://www.bible.com/kids>; acesso em 19 abr. 2025.  
 [^3]: Life.Church. *Bible App for Kids Curriculum*. Disponível em <https://open.life.church/preschool>; acesso em 19 abr. 2025.  
 [^4]: Saint Mary's Press. *The Catholic Children's Bible App*. Disponível em <https://www.smp.org/TheCatholicChildren%27sBibleapp/>; acesso em 19 abr. 2025.  
@@ -76,7 +83,9 @@ Transformar o aprendizado bíblico em uma jornada lúdica, acessível e signific
 [^18]: Nielsen Norman Group. *Mobile Navigation patterns*. Disponível em <https://www.nngroup.com/articles/mobile-navigation/>; acesso em 19 abr. 2025.  
 [^19]: Material Design. *Splash Screen guidelines*. Disponível em <https://material.io/design/platform-guidance/android-splash-screen.html>; acesso em 19 abr. 2025.  
 [^20]: Material Design. *Onboarding patterns*. Disponível em <https://material.io/design/communication/onboarding.html>; acesso em 19 abr. 2025.  
-[^21]: UX Planet. *Quiz Feedback patterns*. Disponível em <https://uxplanet.org/designing-quiz-feedback-ux-7f4c19c8c1cf>; acesso em 19 abr. 2025. 
+[^21]: UX Planet. *Quiz Feedback patterns*. Disponível em <https://uxplanet.org/designing-quiz-feedback-ux-7f4c19c8c1cf>; acesso em 19 abr. 2025.
+[^22]: Pokémon Company. Pokédex Design Patterns. Disponível em <https://www.pokemon.com/us/pokedex/>; acesso em 19 abr. 2025.
+[^23]: Marvel Entertainment. Marvel Character Database UX. Disponível em <https://www.marvel.com/characters>; acesso em 19 abr. 2025.
 
 ## 🚀 Instalação & Execução  
 ```bash
